@@ -1,0 +1,16 @@
+<div ng-controller="TodoCtrl">
+
+<div class="row">
+  <div class="col-md-12" ng-repeat="todo in todos">
+    <button ng-click="done(todo.id)" class="btn btn-xs btn-danger">Done</button>
+    <input type="text" ng-model="todo.text" ng-keyup="save($event,todo)">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" ng-model="newTodo" ng-keyup="add($event)">
+  </div>
+</div>
+
+</div>
